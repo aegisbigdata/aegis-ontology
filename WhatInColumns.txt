@@ -1,0 +1,125 @@
+# How to express “What is in the columns” in the aegis: vocabulary
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix aegis: <http://aegis-bigdata.eu/vocabulary/> .	#tentative
+
+
+# CLASSES:
+
+aegis:DataSet
+	rdf:type rdfs:Class;
+	rdfs:subClassOf dcat:Dataset;
+	rdfs:description
+“Type of the datasets that are hosted in an AEGIS platform.” .
+
+aegis:TabularDataSet
+	rdf:type rdfs:Class;
+	rdfs:subClassOf aegis:DataSet;
+	rdfs:description
+“Type of AEGIS datasets that contain tabular data,
+e.g., a CSV table, or a table in a relational database.” .
+
+aegis:Factor
+	rdf:type rdfs:Class;
+	rdfs:description
+“AEGIS sees tabular data as tabulated relations (which may also be functions).
+In relational database parlance, relations (or functions) conceptually are subsets of product spaces.
+Every table row represents a tuple contained in that subset.
+Every column of an AEGIS tabular dataset represents a factor space of the product space.
+It shall hence be typed as aegis:Factor,
+and «what is in the column» shall be described by the other aegis: classes and properties.
+(Relations don't have columns; tables have.)” .
+
+aegis:FactorTypeClass rdfs:subClassOf rdfs:Class,
+	rdfs:description
+“The class of the types that AEGIS provides to describe table column content,
+with the intention to support the detection of correlations via compatible columns.” .
+
+aegis:MeasureOrCount rdf:type aegis:FactorTypeClass;
+	rdfs:description “Members of this class (type) are columns whose entries count or measure something.”;
+	rdfs:seeAlso aegis:MeasuredOrCountedUnit.
+
+aegis:TimePointSpan rdf:type aegis:FactorTypeClass;
+	rdfs:description
+“Members of this class (type) are columns whose entries describe a time point or time span in whatever resolution.” .
+
+aegis:GeoName rdf:type aegis:FactorTypeClass;
+	rdfs:description
+“Members of this class (type) are columns whose entries are proper names that designate geographic entities, e.g. cities, regions, or countries.” .
+
+aegis:GeoCoordinates rdf:type aegis:FactorTypeClass;
+	rdfs:description “Members of this class (type) are columns whose entries are geographic coordinates (long/lat).” .
+
+aegis:FreeText rdf:type aegis:FactorTypeClass;
+	rdfs:description “Members of this class (type) are columns whose entries are texts in any natural language.” .
+
+aegis:Image rdf:type aegis:FactorTypeClass;
+	rdfs:description “Members of this class (type) are columns whose entries are (references to) images.” .
+
+aegis:Video rdf:type aegis:FactorTypeClass;
+	rdfs:description “Members of this class (type) are columns whose entries are (references to) videos.” .
+
+aegis:Audio rdf:type aegis:FactorTypeClass;
+	rdfs:description“Members of this class (type) are columns whose entries are (references to) audios.” .
+
+aegis:DatabaseKey rdf:type rdfs:Class;
+	rdfs:description “Members of this class (type) are columns whose entries are foreign keys to some database table.” .
+
+
+# PROPERTIES:
+
+aegis:hasKeyFactor
+	rdf:type rdfs:Property;
+	rdfs:domain aegis:TabularDataSet;
+	rdfs:range aegis:Factor;
+	rdfs:seeAlso aegis:hasValueFactor;
+	rdfs:description
+“In database parlance, one or more (or all) of the columns of an AEGIS tabular dataset constitute its primary key.
+These columns possess the well-known uniqueness property,
+which effects that the tabulated relation is actually a function.
+Tabular datasets are tabulated relations,
+and their columns are the materializations of the factors of the underlying relation.
+The property aegis:hasKeyFactor is used to link a tabular dataset
+to each of the key factor(s) of the tabulated relation,
+hence there may be more than one instance of the aegis:hasKeyFactor property
+emanating from a particular dataset.” .
+
+aegis:hasValueFactor 
+	rdf:type rdfs:Property;
+	rdfs:domain aegis:TabularDataSet;
+	rdfs:range aegis:Factor;
+	rdfs:seeAlso aegis:hasKeyFactor;
+	rdfs:description
+“The property aegis:hasValueFactor is used to link a tabular dataset
+to each of the non-key factor(s) of the tabulated relation.
+There may be none, one, or more instances of the aegis:hasValueFactor property
+emanating from a particular dataset.” .
+
+aegis:columnNumber
+	rdf:type rdfs:Property;
+	rdfs:domain aegis:Factor;
+	rdfs:range xsd:integer;
+	rdfs:description
+“This property links an AEGIS factor, materialized as a table column, 
+to the number of the column within the table, starting with 1.“ .
+
+aegis:factorType
+	rdf:type rdfs:Property;
+	rdfs:domain aegis:Factor;
+	rdfs:range aegis:Class;
+	rdfs:description
+“This property links an AEGIS factor, materialized as a table column, 
+to the type of the entries of the column.
+Here, the members of aegis:FactorTypeClass or domain vocabularies are useful.“ .
+
+aegis:measuredOrCountedUnit
+	rdf:type rdfs:Property;
+	rdfs:domain aegis:Factor;
+	rdfs:range rdfs:Resource;
+	rdfs:description
+“This property links an AEGIS factor (materialized as a table column)
+with counts or measurements to the type of things being counted or measured.
+This type may be specified by a generic entity, by an RDF class, or by a string.
+Here, domain ontologies may be useful.“ .
