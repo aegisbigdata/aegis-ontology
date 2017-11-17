@@ -30,7 +30,7 @@ Every table row represents a tuple contained in that subset.
 Every column of an AEGIS tabular dataset represents a factor space of the product space.
 It shall hence be typed as aegis:Factor,
 and «what is in the column» shall be described by the other aegis: classes and properties.
-(Relations don't have columns; tables have.)” .
+(Relations don't have columns; tables do.)” .
 
 aegis:FactorTypeClass rdfs:subClassOf rdfs:Class,
 	rdfs:description
