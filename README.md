@@ -8,7 +8,7 @@ Big Data is also about gaining new insights by *combining* datasets.
 
 Assumption: For the time being, focus on *tabular* datasets only (CSV etc.).
 
-Two tabular datasets can be combined (correlated, joined)
+Two tabular datasets can be combined (i.e. correlated, joined)
 if they have semantically compatible columns in common;
 e.g., if both have a column with geo coordinates in the same region.
 This situation is the basis for a correlation or a DB join.
