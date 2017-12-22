@@ -1,0 +1,45 @@
+Example CSV dataset (fictitious):
+
+"City","Year","Crimes"
+"Berlin",2010,12345
+"Berlin",2011,12345
+"Hamburg",2010,23456
+"Hamburg",2011,23456
+
+
+According to the column content classification scheme,
+the following attribution are made:
+
+column 1 → content type "geo names, addresses"
+	auxiliary field (disambiguation) "Germany"
+column 2 → content type "abs. time points, dates"
+	auxiliary field not used
+column 3 → content type "quantities"
+	auxiliary field (class of quantified items) "crimes"
+
+
+Let aegis:myDataset be the URI of the dataset in question.
+In the formalized ontology,
+these attributions look then as follows:
+
+aegis:myDataset
+	aegis:hasKeyFactor [
+		rdf:type aegis:Factor;
+		aegis:columnNumber 1,
+		aegis:columnHeader "City",
+		aegis:columnType aegis:AddressGeoName
+		aegis:disambiguifier "Germany"
+	];
+	aegis:hasKeyFactor [
+		rdf:type aegis:Factor;
+		aegis:columnNumber 1,
+		aegis:columnHeader "City",
+		aegis:columnType aegis:AbsTimepoint
+	];
+	aegis:hasValueFactor [
+		rdf:type aegis:Factor;
+		aegis:columnNumber 3,
+		aegis:columnHeader "Crimes",
+		aegis:columnType aegis:Quantities,
+		aegis:MeasuredOrCountedUnit "crimes" # domain ontology element would serve as well
+	].

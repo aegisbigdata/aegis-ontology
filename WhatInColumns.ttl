@@ -24,10 +24,11 @@ e.g., a CSV table, or a table in a relational database.” .
 aegis:Factor
 	rdf:type rdfs:Class;
 	rdfs:description
-“AEGIS sees tabular data as tabulated relations (which may also be functions).
-In relational database parlance, relations (or functions) conceptually are subsets of product spaces.
-Every table row represents a tuple contained in that subset.
-Every column of an AEGIS tabular dataset represents a factor space of the product space.
+“AEGIS sees tabular data as tabulated relations.
+Relations may even be functions when certain uniqueness properties are met.
+Rrelations (or functions) conceptually are subsets of product spaces.
+In tabular data, every row represents a tuple contained in that subset.
+Every column represents a factor space of the product space.
 It shall hence be typed as aegis:Factor,
 and «what is in the column» shall be described by the other aegis: classes and properties.
 (Relations don't have columns; tables do.)” .
@@ -37,35 +38,57 @@ aegis:FactorTypeClass rdfs:subClassOf rdfs:Class,
 “The class of the types that AEGIS provides to describe table column content,
 with the intention to support the detection of correlations via compatible columns.” .
 
-aegis:MeasureOrCount rdf:type aegis:FactorTypeClass;
-	rdfs:description “Members of this class (type) are columns whose entries count or measure something.”;
+
+# Classes for the individual cases:
+
+aegis:Diverse rdf:type aegis:FactorTypeClass;
+	rdfs:description “Use this when no single more specific case applies.”.
+
+aegis:DomainElements rdf:type aegis:FactorTypeClass;
+	rdfs:description “Use this for members of a specific domain ontology class.”;
+	rdfs:seeAlso aegis:factorDomain.
+
+aegis:Quantities rdf:type aegis:FactorTypeClass;
+	rdfs:description “counts or weights of something.”;
 	rdfs:seeAlso aegis:MeasuredOrCountedUnit.
 
-aegis:TimePointSpan rdf:type aegis:FactorTypeClass;
-	rdfs:description
-“Members of this class (type) are columns whose entries describe a time point or time span in whatever resolution.” .
+aegis:AbsTimes rdf:type aegis:FactorTypeClass;
+	rdfs:description “Entries describe an absolute time point or time span in whatever resolution.” .
 
-aegis:GeoName rdf:type aegis:FactorTypeClass;
+aegis:Ordinals rdf:type aegis:FactorTypeClass;
+	rdfs:description “Entries represent rankings (ordinal scale in statistics parlance).” .
+
+aegis:GeoNames rdf:type aegis:FactorTypeClass;
 	rdfs:description
-“Members of this class (type) are columns whose entries are proper names that designate geographic entities, e.g. cities, regions, or countries.” .
+“Entries are addresses, parts of addresses, zip codes,
+or proper names that designate geographic entities, e.g. cities, regions, or countries.” .
 
 aegis:GeoCoordinates rdf:type aegis:FactorTypeClass;
-	rdfs:description “Members of this class (type) are columns whose entries are geographic coordinates (long/lat).” .
+	rdfs:description
+“Members of this class (type) are columns whose entries are geographic coordinates (long/lat/alt), singles or in pairs or triples.” .
 
-aegis:FreeText rdf:type aegis:FactorTypeClass;
-	rdfs:description “Members of this class (type) are columns whose entries are texts in any natural language.” .
+aegis:WebAdresses rdf:type aegis:FactorTypeClass;
+	rdfs:description “Column entries are web addresses or email addresses.” .
 
-aegis:Image rdf:type aegis:FactorTypeClass;
-	rdfs:description “Members of this class (type) are columns whose entries are (references to) images.” .
+aegis:ProperNames rdf:type aegis:FactorTypeClass;
+	rdfs:description “Column entries are proper names of persons, institutions, enterprises, or others.” .
 
-aegis:Video rdf:type aegis:FactorTypeClass;
-	rdfs:description “Members of this class (type) are columns whose entries are (references to) videos.” .
+aegis:FreeTexts rdf:type aegis:FactorTypeClass;
+	rdfs:description “Entries are titles, captions, or any texts in any natural language.” .
 
-aegis:Audio rdf:type aegis:FactorTypeClass;
-	rdfs:description“Members of this class (type) are columns whose entries are (references to) audios.” .
+aegis:Images rdf:type aegis:FactorTypeClass;
+	rdfs:description “Column entries are (references to) images.” .
 
-aegis:DatabaseKey rdf:type rdfs:Class;
-	rdfs:description “Members of this class (type) are columns whose entries are foreign keys to some database table.” .
+aegis:Videos rdf:type aegis:FactorTypeClass;
+	rdfs:description “Column entries are (references to) videos.” .
+
+aegis:Audios rdf:type aegis:FactorTypeClass;
+	rdfs:description“Column entries are (references to) audios.” .
+
+aegis:NominalKeys rdf:type rdfs:Class;
+	rdfs:description “Column entries are numbers or symbolic identifiers
+whose primary determination is to serve as symbols for identification.” .
+
 
 
 # PROPERTIES:
@@ -114,6 +137,11 @@ aegis:factorType
 to the type of the entries of the column.
 Here, the members of aegis:FactorTypeClass or domain vocabularies are useful.“ .
 
+
+
+
+# the following properties describe auxiliary information:
+
 aegis:measuredOrCountedUnit
 	rdf:type rdfs:Property;
 	rdfs:domain aegis:Factor;
@@ -123,3 +151,45 @@ aegis:measuredOrCountedUnit
 with counts or measurements to the type of things being counted or measured.
 This type may be specified by a generic entity, by an RDF class, or by a string.
 Here, domain ontologies may be useful.“ .
+
+
+aegis:factorDomain
+	rdf:type rdfs:Property;
+	rdfs:domain aegis:Factor;
+	rdfs:range rdfs:Resource;
+	rdfs:description
+“This property links an AEGIS factor (materialized as a table column)
+which contains elements of some domain to said domain.
+The domain may be a formal RDF class from some domain ontology,
+or it may be specified informally as a textual string.“ .
+
+
+aegis:disambiguifier
+	rdf:type rdfs:Property;
+	rdfs:domain aegis:Factor;
+	rdfs:range rdfs:Resource;
+	rdfs:description
+“This property links an AEGIS factor (materialized as a table column)
+with proper names to an information that disambiguates these proper names.
+Often this information consists in a restriction of the coverage.
+It may be stated formally as a URI from some domain ontology,
+or informally as a textual string.“ .
+
+
+aegis:langTag
+	rdf:type rdfs:Property;
+	rdfs:domain aegis:Factor;
+	rdfs:range xsd:string;
+	rdfs:description
+“This property links an AEGIS factor (materialized as a table column)
+with counts or measurements to the type of things being counted or measured.
+This type may be specified by a generic entity, by an RDF class, or by a string.
+Here, domain ontologies may be useful.“ .
+
+
+
+
+
+
+
+
