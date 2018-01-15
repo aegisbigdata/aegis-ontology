@@ -53,6 +53,10 @@ aegis:Quantities rdf:type aegis:FactorTypeClass;
 	rdfs:description "counts or weights of something.";
 	rdfs:seeAlso aegis:MeasuredOrCountedUnit.
 
+aegis:Measurements rdf:type aegis:FactorTypeClass;
+	rdfs:description "physical measurements.";
+	rdfs:seeAlso aegis:MeasuredOrCountedUnit.
+
 aegis:AbsTimes rdf:type aegis:FactorTypeClass;
 	rdfs:description "Entries describe an absolute time point or time span in whatever resolution." .
 
