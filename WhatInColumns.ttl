@@ -11,7 +11,6 @@
 
 aegis:DatasetOrDistribution
 	rdf:type rdfs:Class;
-	rdfs:subClassOf dcat:Dataset;
 	rdfs:description
 "Type of the datasets or distributions that are hosted in an AEGIS platform." .
 
