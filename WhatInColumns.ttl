@@ -9,17 +9,20 @@
 
 # CLASSES:
 
-aegis:DataSet
+aegis:DatasetOrDistribution
 	rdf:type rdfs:Class;
 	rdfs:subClassOf dcat:Dataset;
 	rdfs:description
-"Type of the datasets that are hosted in an AEGIS platform." .
+"Type of the datasets or distributions that are hosted in an AEGIS platform." .
 
-aegis:TabularDataSet
+dcat:Dataset rdfs:subClassOf aegis:DatasetOrDistribution .
+dcat:Distribution rdfs:subClassOf aegis:DatasetOrDistribution .
+
+aegis:TabularDatasetOrDistribution
 	rdf:type rdfs:Class;
-	rdfs:subClassOf aegis:DataSet;
+	rdfs:subClassOf aegis:DatasetOrDistribution;
 	rdfs:description
-"Type of AEGIS datasets that contain tabular data,
+"Type of AEGIS datasets or distributions that contain tabular data,
 e.g., a CSV table, or a table in a relational database." .
 
 aegis:Factor
@@ -100,7 +103,7 @@ whose primary determination is to serve as symbols for identification." .
 
 aegis:hasKeyFactor
 	rdf:type rdfs:Property;
-	rdfs:domain aegis:TabularDataSet;
+	rdfs:domain aegis:TabularDatasetOrDistribution;
 	rdfs:range aegis:Factor;
 	rdfs:seeAlso aegis:hasValueFactor;
 	rdfs:description
@@ -116,7 +119,7 @@ emanating from a particular dataset." .
 
 aegis:hasValueFactor 
 	rdf:type rdfs:Property;
-	rdfs:domain aegis:TabularDataSet;
+	rdfs:domain aegis:TabularDatasetOrDistribution;
 	rdfs:range aegis:Factor;
 	rdfs:seeAlso aegis:hasKeyFactor;
 	rdfs:description
