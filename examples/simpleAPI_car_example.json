@@ -1,0 +1,166 @@
+{
+	"id": "car_demo_trip1",
+	"title": "Car Scenario Demo Trip 1",
+    "description": "This dataset includes multiple data from one car trip",
+    "keywords": [
+        "cars",
+        "safety"
+    ],
+	"distributions": [
+        {
+            "accessURL": "hdfs:///Projects/VIF/DemoTrip1/trip1_acceleration.csv",
+            "description": "Acceleration data of the car",
+            "format": "CSV",
+            "keyFactors": [
+                {
+                    "columnNumber": 1,
+                    "columnHeader": "acceleration_id",
+                    "factorType": "NominalKeys"
+                }
+            ],
+            "valueFactors": [
+                {
+                    "columnNumber": 2,
+                    "columnHeader": "trip_id",
+                    "factorType": "NominalKeys"
+                },
+                {
+                    "columnNumber": 3,
+                    "columnHeader": "x_value",
+                    "factorType": "Measurements"
+                },
+                {
+                    "columnNumber": 4,
+                    "columnHeader": "y_value",
+                    "factorType": "Measurements"
+                },
+                {
+                    "columnNumber": 5,
+                    "columnHeader": "z_value",
+                    "factorType": "Measurements"
+                },
+                {
+                    "columnNumber": 6,
+                    "columnHeader": "timestamp",
+                    "factorType": "AbsTimes"
+                }
+            ]
+
+        },
+        {
+            "accessURL": "hdfs:///Projects/VIF/DemoTrip1/trip1_gyroscope.csv",
+            "description": "Gyroscope data of the car",
+            "format": "CSV",
+            "keyFactors": [
+                {
+                    "columnNumber": 1,
+                    "columnHeader": "gyroscope_id",
+                    "factorType": "NominalKeys"
+                }
+            ],
+            "valueFactors": [
+                {
+                    "columnNumber": 2,
+                    "columnHeader": "trip_id",
+                    "factorType": "NominalKeys"
+                },
+                {
+                    "columnNumber": 3,
+                    "columnHeader": "x_value",
+                    "factorType": "Measurements"
+                },
+                {
+                    "columnNumber": 4,
+                    "columnHeader": "y_value",
+                    "factorType": "Measurements"
+                },
+                {
+                    "columnNumber": 5,
+                    "columnHeader": "z_value",
+                    "factorType": "Measurements"
+                },
+                {
+                    "columnNumber": 6,
+                    "columnHeader": "timestamp",
+                    "factorType": "AbsTimes"
+                }
+            ]
+
+        },
+        {
+            "accessURL": "hdfs:///Projects/VIF/DemoTrip1/trip1_obd.csv",
+            "description": "OBD (On-board diagnostics) data of the car",
+            "format": "CSV",
+            "keyFactors": [
+                {
+                    "columnNumber": 1,
+                    "columnHeader": "obdData_id",
+                    "factorType": "NominalKeys"
+                }
+            ],
+            "valueFactors": [
+                {
+                    "columnNumber": 2,
+                    "columnHeader": "trip_id",
+                    "factorType": "NominalKeys"
+                },
+                {
+                    "columnNumber": 3,
+                    "columnHeader": "obdPid",
+                    "factorType": "NominalKeys"
+                },
+                {
+                    "columnNumber": 4,
+                    "columnHeader": "data",
+                    "factorType": "Measurements"
+                },
+                {
+                    "columnNumber": 5,
+                    "columnHeader": "timestamp",
+                    "factorType": "AbsTimes"
+                }
+            ]
+
+        },
+        {
+            "accessURL": "hdfs:///Projects/VIF/DemoTrip1/trip1_positions.csv",
+            "description": "Position data of the car",
+            "format": "CSV",
+            "keyFactors": [
+                {
+                    "columnNumber": 1,
+                    "columnHeader": "pos_id",
+                    "factorType": "NominalKeys"
+                }
+            ],
+            "valueFactors": [
+                {
+                    "columnNumber": 2,
+                    "columnHeader": "trip_id",
+                    "factorType": "NominalKeys"
+                },
+                {
+                    "columnNumber": 3,
+                    "columnHeader": "latitude",
+                    "factorType": "GeoCoordinates"
+                },
+                {
+                    "columnNumber": 4,
+                    "columnHeader": "longitude",
+                    "factorType": "GeoCoordinates"
+                },
+                {
+                    "columnNumber": 5,
+                    "columnHeader": "altitude",
+                    "factorType": "GeoCoordinates"
+                },
+                {
+                    "columnNumber": 6,
+                    "columnHeader": "timestamp",
+                    "factorType": "AbsTimes"
+                }
+            ]
+
+        }
+	]
+}
