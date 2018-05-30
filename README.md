@@ -29,16 +29,6 @@ __Hopsworks counterpart: Project__
 
 __Hopsworks counterpart: Data Set__
 
-System provided
-
-* dcatap:contact_point
-* dcatap:distributions
-* dcatap:publisher
-
-
-* hops:folder
-
-
 |Property|DCAT-AP|User defined|Hopsworks|Mandatory|Info
 |---|---|---|---|---|--|
 |id|-|no|id|yes|integer|
