@@ -1,0 +1,281 @@
+@prefix : <http://www.aegis-bigdata.eu/md/def/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.aegis-bigdata.eu/md/def/> .
+
+<http://www.aegis-bigdata.eu/md/def/> rdf:type owl:Ontology ;
+                                       <http://purl.org/dc/elements/1.1/abstract> "This is the AEGIS Big Data Vocabulary."^^xsd:string ;
+                                       <http://purl.org/dc/elements/1.1/creator> "AEGIS Project"^^xsd:string ,
+                                                                                 "Andreas Schramm"^^xsd:string ,
+                                                                                 "Fabian Kirstein"^^xsd:string ,
+                                                                                 "Yury Glikman"^^xsd:string ;
+                                       <http://purl.org/dc/elements/1.1/publisher> "Fraunhofer FOKUS"^^xsd:string ;
+                                       <http://purl.org/dc/elements/1.1/title> "AEGIS Big Data Vocabulary"^^xsd:string ;
+                                       <http://purl.org/ontology/bibo/status> "Draft"^^xsd:string ;
+                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "aegis"^^xsd:string ;
+                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.aegis-bigdata.eu/md/voc/"^^xsd:string ;
+                                       owl:versionInfo "0.5.0"^^xsd:string .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.aegis-bigdata.eu/md/def/core#hasField
+<http://www.aegis-bigdata.eu/md/def/core#hasField> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> ;
+                                                   rdfs:range <http://www.aegis-bigdata.eu/md/def/core#Field> ;
+                                                   rdfs:comment "A field of the tabular data."^^xsd:string ;
+                                                   rdfs:label "hasField"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#type
+<http://www.aegis-bigdata.eu/md/def/core#type> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://www.aegis-bigdata.eu/md/def/core#Field> ;
+                                               rdfs:range <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                               rdfs:comment "The type of data of the column."^^xsd:string ;
+                                               rdfs:label "type"^^xsd:string .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.aegis-bigdata.eu/md/def/core#description
+<http://www.aegis-bigdata.eu/md/def/core#description> rdf:type owl:DatatypeProperty ;
+                                                      rdfs:domain <http://www.aegis-bigdata.eu/md/def/core#Field> ;
+                                                      rdfs:range xsd:string ;
+                                                      rdfs:comment "An expressive description of the column."^^xsd:string ;
+                                                      rdfs:label "description"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey
+<http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:domain <http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:comment "A primary key of the tabular data."^^xsd:string ;
+                                                        rdfs:label "hasPrimaryKey"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#name
+<http://www.aegis-bigdata.eu/md/def/core#name> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://www.aegis-bigdata.eu/md/def/core#Field> ;
+                                               rdfs:range xsd:string ;
+                                               rdfs:comment "The name of the column aka. the value in the first row."^^xsd:string ;
+                                               rdfs:label "name"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#number
+<http://www.aegis-bigdata.eu/md/def/core#number> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <http://www.aegis-bigdata.eu/md/def/core#Field> ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:comment "The number of the column."^^xsd:string ;
+                                                 rdfs:label "number"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/hops#datasetId
+<http://www.aegis-bigdata.eu/md/def/hops#datasetId> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.aegis-bigdata.eu/md/def/core#Dataset> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:comment "Unique ID of the corresponding data set in Hops"^^xsd:string ;
+                                                    rdfs:label "datasetId"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/hops#fileId
+<http://www.aegis-bigdata.eu/md/def/hops#fileId> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain <http://www.aegis-bigdata.eu/md/def/core#Distribution> ;
+                                                 rdfs:range xsd:string ;
+                                                 rdfs:comment "Unique ID of the corresponding file in Hops"^^xsd:string ;
+                                                 rdfs:label "fileId"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/hops#projectId
+<http://www.aegis-bigdata.eu/md/def/hops#projectId> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:domain <http://www.aegis-bigdata.eu/md/def/core#Catalog> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:comment "Unique ID of the corresponding project in Hops"^^xsd:string ;
+                                                    rdfs:label "projectId"^^xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.aegis-bigdata.eu/md/def/core#Catalog
+<http://www.aegis-bigdata.eu/md/def/core#Catalog> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.w3.org/ns/dcat#Catalog> ;
+                                                  rdfs:comment "Type of a catalogue on the AEGIS platform. (Projects)"^^xsd:string ;
+                                                  rdfs:label "Catalog"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Dataset
+<http://www.aegis-bigdata.eu/md/def/core#Dataset> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.w3.org/ns/dcat#Dataset> ;
+                                                  rdfs:comment "Type of a dataset on the AEGIS platform. (Data Set)"^^xsd:string ;
+                                                  rdfs:label "Dataset"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Distribution
+<http://www.aegis-bigdata.eu/md/def/core#Distribution> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.w3.org/ns/dcat#Distribution> ;
+                                                       rdfs:comment "Type of a distribution on the AEGIS platform. (File)"^^xsd:string ;
+                                                       rdfs:label "Distribution"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Field
+<http://www.aegis-bigdata.eu/md/def/core#Field> rdf:type owl:Class ;
+                                                rdfs:comment "A definition of a column in a table"^^xsd:string ;
+                                                rdfs:label "Field"^^xsd:string ;
+                                                rdfs:seeAlso <http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#FieldType
+<http://www.aegis-bigdata.eu/md/def/core#FieldType> rdf:type owl:Class ;
+                                                    rdfs:subClassOf rdfs:Class ;
+                                                    rdfs:comment "The precise type of data of a column"^^xsd:string ;
+                                                    rdfs:label "FieldType"^^xsd:string ;
+                                                    rdfs:seeAlso <http://www.aegis-bigdata.eu/md/def/core#Field> .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#TabularDistribution
+<http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://www.aegis-bigdata.eu/md/def/core#Distribution> ;
+                                                              rdfs:comment "Special type of a distribution on the AEGIS platform, which provides tabular data"^^xsd:string ;
+                                                              rdfs:label "TabularDistribution"^^xsd:string .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+rdfs:Class rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+<http://www.w3.org/ns/dcat#Catalog> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Dataset
+<http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.aegis-bigdata.eu/md/def/core#Any
+<http://www.aegis-bigdata.eu/md/def/core#Any> rdf:type owl:NamedIndividual ,
+                                                       <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                              rdfs:comment "Any kind of data"^^xsd:string ;
+                                              rdfs:label "Any"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Array
+<http://www.aegis-bigdata.eu/md/def/core#Array> rdf:type owl:NamedIndividual ,
+                                                         <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                rdfs:comment "The field contains data that is a valid JSON format arrays."^^xsd:string ;
+                                                rdfs:label "Array"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Boolean
+<http://www.aegis-bigdata.eu/md/def/core#Boolean> rdf:type owl:NamedIndividual ,
+                                                           <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                  rdfs:comment "The field contains boolean (true/false) data."^^xsd:string ;
+                                                  rdfs:label "Boolean"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Date
+<http://www.aegis-bigdata.eu/md/def/core#Date> rdf:type owl:NamedIndividual ,
+                                                        <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                               rdfs:comment "A date without a time: ISO8601"^^xsd:string ;
+                                               rdfs:label "Date"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Datetime
+<http://www.aegis-bigdata.eu/md/def/core#Datetime> rdf:type owl:NamedIndividual ,
+                                                            <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                   rdfs:comment "A date with a time: ISO8601"^^xsd:string ;
+                                                   rdfs:label "Datetime"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Duration
+<http://www.aegis-bigdata.eu/md/def/core#Duration> rdf:type owl:NamedIndividual ,
+                                                            <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                   rdfs:comment "A duration of time: ISO8601"^^xsd:string ;
+                                                   rdfs:label "Duration"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Geojson
+<http://www.aegis-bigdata.eu/md/def/core#Geojson> rdf:type owl:NamedIndividual ,
+                                                           <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                  rdfs:comment "The field contains a JSON object according to GeoJSON or TopoJSON spec."^^xsd:string ;
+                                                  rdfs:label "Geojson"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Geopoint
+<http://www.aegis-bigdata.eu/md/def/core#Geopoint> rdf:type owl:NamedIndividual ,
+                                                            <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                   rdfs:comment "The field contains data describing a geographic point: lon,lat"^^xsd:string ;
+                                                   rdfs:label "Geopoint"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Integer
+<http://www.aegis-bigdata.eu/md/def/core#Integer> rdf:type owl:NamedIndividual ,
+                                                           <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                  rdfs:comment "The field contains integers - that is whole numbers."^^xsd:string ;
+                                                  rdfs:label "Integer"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Number
+<http://www.aegis-bigdata.eu/md/def/core#Number> rdf:type owl:NamedIndividual ,
+                                                          <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                 rdfs:comment "The field contains numbers of any kind including decimals."^^xsd:string ;
+                                                 rdfs:label "Number"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Object
+<http://www.aegis-bigdata.eu/md/def/core#Object> rdf:type owl:NamedIndividual ,
+                                                          <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                 rdfs:comment "The field contains data which is valid JSON."^^xsd:string ;
+                                                 rdfs:label "Object"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#String
+<http://www.aegis-bigdata.eu/md/def/core#String> rdf:type owl:NamedIndividual ,
+                                                          <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                 rdfs:comment "The field contains strings, that is, sequences of characters."^^xsd:string ;
+                                                 rdfs:label "String"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Time
+<http://www.aegis-bigdata.eu/md/def/core#Time> rdf:type owl:NamedIndividual ,
+                                                        <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                               rdfs:comment "A time without a date: ISO8601"^^xsd:string ;
+                                               rdfs:label "Time"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#WebAdresses
+<http://www.aegis-bigdata.eu/md/def/core#WebAdresses> rdf:type owl:NamedIndividual ,
+                                                               <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                      rdfs:comment "A valid URL."^^xsd:string ;
+                                                      rdfs:label "WebAdresses"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Year
+<http://www.aegis-bigdata.eu/md/def/core#Year> rdf:type owl:NamedIndividual ,
+                                                        <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                               rdfs:comment "A calendar year: YYYY"^^xsd:string ;
+                                               rdfs:label "Year"^^xsd:string .
+
+
+###  http://www.aegis-bigdata.eu/md/def/core#Yearmonth
+<http://www.aegis-bigdata.eu/md/def/core#Yearmonth> rdf:type owl:NamedIndividual ,
+                                                             <http://www.aegis-bigdata.eu/md/def/core#FieldType> ;
+                                                    rdfs:comment "A specific month in a specific year: YYYY-MM"^^xsd:string ;
+                                                    rdfs:label "Yearmonth"^^xsd:string .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

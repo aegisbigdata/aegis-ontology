@@ -1,11 +1,14 @@
 # AEGIS Ontology and Vocabulary
 
+http://aegis.fokus.fraunhofer.de/
+
+
 This work is based on the following standards and specifications: 
 * DCAT-AP - https://joinup.ec.europa.eu/solution/dcat-application-profile-data-portals-europe
 * Frictionless Data - https://frictionlessdata.io/
 
 
-## Classes
+## Mapping of Classes
 
 
 ### Catalogue
@@ -37,7 +40,7 @@ __Hopsworks counterpart: Data Set__
 |contact_point|dcat:contactPoint|yes|-|no|object|
 |keywords|dcat:keyword|yes|-|yes|array|
 |publisher|dct:publisher|yes|-|no|object|
-|theme|dcat:theme|yes|-|yes|enum|
+|themes|dcat:theme|yes|-|yes|enum|
 |distributions|dcat:distribution|no|-|yes|array|
 
 - contact_point
@@ -64,7 +67,7 @@ __Hopsworks counterpart: File__
 |title|dct:title|yes|name|yes|string|
 |description|dct:description|yes|-|yes|string|
 |format|dct:format|yes|-|yes|string|
-|licence|dct:licence|yes|-|yes|enum|
+|license|dct:license|yes|-|yes|enum|
 |pricing_scheme|-|yes|-|no|enum
 
 - licence
@@ -80,8 +83,6 @@ http://www.aegis-bigdata.eu/md/dataset/{dataset_name}
 
 http://www.aegis-bigdata.eu/md/dataset/{dataset_name}/distribution/{distribution_name}
 
-http://www.aegis-bigdata.eu/md/dataset/{dataset_name}/distribution/{distribution_name}/schema
-
 http://www.aegis-bigdata.eu/md/catalog/{catalog_name}
 
 ### Vocabulary
@@ -89,6 +90,8 @@ http://www.aegis-bigdata.eu/md/catalog/{catalog_name}
 http://www.aegis-bigdata.eu/md/def
 
 ### Graphs
+
+http://www.aegis-bigdata.eu/md/graphs/catalog/{catalog_name}
 
 http://www.aegis-bigdata.eu/md/graphs/dataset/{dataset_name}
 

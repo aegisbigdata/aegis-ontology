@@ -1,0 +1,830 @@
+<h2  id="crossreference" class="list">Cross reference for AEGIS Big Data Vocabulary classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by AEGIS Big Data Vocabulary.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#core#Catalog" title="http://www.aegis-bigdata.eu/md/def/core#Catalog">Catalog</a>
+      </li>
+      <li>
+         <a href="#core#Dataset" title="http://www.aegis-bigdata.eu/md/def/core#Dataset">Dataset</a>
+      </li>
+      <li>
+         <a href="#core#Distribution"
+            title="http://www.aegis-bigdata.eu/md/def/core#Distribution">Distribution</a>
+      </li>
+      <li>
+         <a href="#core#Field" title="http://www.aegis-bigdata.eu/md/def/core#Field">Field</a>
+      </li>
+      <li>
+         <a href="#core#FieldType"
+            title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+      </li>
+      <li>
+         <a href="#core#TabularDistribution"
+            title="http://www.aegis-bigdata.eu/md/def/core#TabularDistribution">TabularDistribution</a>
+      </li>
+   </ul>
+   <div class="entity" id="core#Catalog">
+      <h3>Catalog<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Catalog</p>
+      <div class="comment">
+         <span class="markdown">Type of a catalogue on the AEGIS platform. (Projects)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/dcat#Catalog">catalog</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hops#projectId"
+               title="http://www.aegis-bigdata.eu/md/def/hops#projectId">projectId</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Dataset">
+      <h3>Dataset<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Dataset</p>
+      <div class="comment">
+         <span class="markdown">Type of a dataset on the AEGIS platform. (Data Set)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/dcat#Dataset">dataset</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hops#datasetId"
+               title="http://www.aegis-bigdata.eu/md/def/hops#datasetId">datasetId</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Distribution">
+      <h3>Distribution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Distribution</p>
+      <div class="comment">
+         <span class="markdown">Type of a distribution on the AEGIS platform. (File)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/dcat#Distribution">distribution</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#core#TabularDistribution"
+               title="http://www.aegis-bigdata.eu/md/def/core#TabularDistribution">TabularDistribution</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hops#fileId" title="http://www.aegis-bigdata.eu/md/def/hops#fileId">fileId</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Field">
+      <h3>Field<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Field</p>
+      <div class="comment">
+         <span class="markdown">A definition of a column in a table</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#core#description"
+               title="http://www.aegis-bigdata.eu/md/def/core#description">description</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#core#name" title="http://www.aegis-bigdata.eu/md/def/core#name">name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#core#number" title="http://www.aegis-bigdata.eu/md/def/core#number">number</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#core#type" title="http://www.aegis-bigdata.eu/md/def/core#type">type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#core#hasField" title="http://www.aegis-bigdata.eu/md/def/core#hasField">hasField</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#FieldType">
+      <h3>FieldType<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#FieldType</p>
+      <div class="comment">
+         <span class="markdown">The precise type of data of a column</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Class">class</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#core#type" title="http://www.aegis-bigdata.eu/md/def/core#type">type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#core#Any" title="http://www.aegis-bigdata.eu/md/def/core#Any">Any</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Array" title="http://www.aegis-bigdata.eu/md/def/core#Array">Array</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Boolean" title="http://www.aegis-bigdata.eu/md/def/core#Boolean">Boolean</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Date" title="http://www.aegis-bigdata.eu/md/def/core#Date">Date</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Datetime" title="http://www.aegis-bigdata.eu/md/def/core#Datetime">Datetime</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Duration" title="http://www.aegis-bigdata.eu/md/def/core#Duration">Duration</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Geojson" title="http://www.aegis-bigdata.eu/md/def/core#Geojson">Geojson</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Geopoint" title="http://www.aegis-bigdata.eu/md/def/core#Geopoint">Geopoint</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Integer" title="http://www.aegis-bigdata.eu/md/def/core#Integer">Integer</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Number" title="http://www.aegis-bigdata.eu/md/def/core#Number">Number</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Object" title="http://www.aegis-bigdata.eu/md/def/core#Object">Object</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#String" title="http://www.aegis-bigdata.eu/md/def/core#String">String</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Time" title="http://www.aegis-bigdata.eu/md/def/core#Time">Time</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#WebAdresses"
+               title="http://www.aegis-bigdata.eu/md/def/core#WebAdresses">WebAdresses</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Year" title="http://www.aegis-bigdata.eu/md/def/core#Year">Year</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#core#Yearmonth"
+               title="http://www.aegis-bigdata.eu/md/def/core#Yearmonth">Yearmonth</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#TabularDistribution">
+      <h3>TabularDistribution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#TabularDistribution</p>
+      <div class="comment">
+         <span class="markdown">Special type of a distribution on the AEGIS platform, which provides tabular data</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#core#Distribution"
+               title="http://www.aegis-bigdata.eu/md/def/core#Distribution">Distribution</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#core#hasField" title="http://www.aegis-bigdata.eu/md/def/core#hasField">hasField</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#core#hasPrimaryKey"
+               title="http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey">hasPrimaryKey</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#core#hasField" title="http://www.aegis-bigdata.eu/md/def/core#hasField">hasField</a>
+      </li>
+      <li>
+         <a href="#core#type" title="http://www.aegis-bigdata.eu/md/def/core#type">type</a>
+      </li>
+   </ul>
+   <div class="entity" id="core#hasField">
+      <h3>hasField<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#hasField</p>
+      <div class="comment">
+         <span class="markdown">A field of the tabular data.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#core#TabularDistribution"
+                  title="http://www.aegis-bigdata.eu/md/def/core#TabularDistribution">TabularDistribution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#core#Field" title="http://www.aegis-bigdata.eu/md/def/core#Field">Field</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="core#type">
+      <h3>type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#type</p>
+      <div class="comment">
+         <span class="markdown">The type of data of the column.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#core#Field" title="http://www.aegis-bigdata.eu/md/def/core#Field">Field</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#core#FieldType"
+                  title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hops#datasetId"
+            title="http://www.aegis-bigdata.eu/md/def/hops#datasetId">datasetId</a>
+      </li>
+      <li>
+         <a href="#core#description"
+            title="http://www.aegis-bigdata.eu/md/def/core#description">description</a>
+      </li>
+      <li>
+         <a href="#hops#fileId" title="http://www.aegis-bigdata.eu/md/def/hops#fileId">fileId</a>
+      </li>
+      <li>
+         <a href="#core#hasPrimaryKey"
+            title="http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey">hasPrimaryKey</a>
+      </li>
+      <li>
+         <a href="#core#name" title="http://www.aegis-bigdata.eu/md/def/core#name">name</a>
+      </li>
+      <li>
+         <a href="#core#number" title="http://www.aegis-bigdata.eu/md/def/core#number">number</a>
+      </li>
+      <li>
+         <a href="#hops#projectId"
+            title="http://www.aegis-bigdata.eu/md/def/hops#projectId">projectId</a>
+      </li>
+   </ul>
+   <div class="entity" id="hops#datasetId">
+      <h3>datasetId<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/hops#datasetId</p>
+      <div class="comment">
+         <span class="markdown">Unique ID of the corresponding data set in Hops</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#core#Dataset" title="http://www.aegis-bigdata.eu/md/def/core#Dataset">Dataset</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="core#description">
+      <h3>description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#description</p>
+      <div class="comment">
+         <span class="markdown">An expressive description of the column.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#core#Field" title="http://www.aegis-bigdata.eu/md/def/core#Field">Field</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hops#fileId">
+      <h3>fileId<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/hops#fileId</p>
+      <div class="comment">
+         <span class="markdown">Unique ID of the corresponding file in Hops</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#core#Distribution"
+                  title="http://www.aegis-bigdata.eu/md/def/core#Distribution">Distribution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="core#hasPrimaryKey">
+      <h3>hasPrimaryKey<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey</p>
+      <div class="comment">
+         <span class="markdown">A primary key of the tabular data.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#core#TabularDistribution"
+                  title="http://www.aegis-bigdata.eu/md/def/core#TabularDistribution">TabularDistribution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="core#name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#name</p>
+      <div class="comment">
+         <span class="markdown">The name of the column aka. the value in the first row.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#core#Field" title="http://www.aegis-bigdata.eu/md/def/core#Field">Field</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="core#number">
+      <h3>number<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#number</p>
+      <div class="comment">
+         <span class="markdown">The number of the column.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#core#Field" title="http://www.aegis-bigdata.eu/md/def/core#Field">Field</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hops#projectId">
+      <h3>projectId<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/hops#projectId</p>
+      <div class="comment">
+         <span class="markdown">Unique ID of the corresponding project in Hops</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#core#Catalog" title="http://www.aegis-bigdata.eu/md/def/core#Catalog">Catalog</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#core#Any" title="http://www.aegis-bigdata.eu/md/def/core#Any">Any</a>
+      </li>
+      <li>
+         <a href="#core#Array" title="http://www.aegis-bigdata.eu/md/def/core#Array">Array</a>
+      </li>
+      <li>
+         <a href="#core#Boolean" title="http://www.aegis-bigdata.eu/md/def/core#Boolean">Boolean</a>
+      </li>
+      <li>
+         <a href="#core#Date" title="http://www.aegis-bigdata.eu/md/def/core#Date">Date</a>
+      </li>
+      <li>
+         <a href="#core#Datetime" title="http://www.aegis-bigdata.eu/md/def/core#Datetime">Datetime</a>
+      </li>
+      <li>
+         <a href="#core#Duration" title="http://www.aegis-bigdata.eu/md/def/core#Duration">Duration</a>
+      </li>
+      <li>
+         <a href="#core#Geojson" title="http://www.aegis-bigdata.eu/md/def/core#Geojson">Geojson</a>
+      </li>
+      <li>
+         <a href="#core#Geopoint" title="http://www.aegis-bigdata.eu/md/def/core#Geopoint">Geopoint</a>
+      </li>
+      <li>
+         <a href="#core#Integer" title="http://www.aegis-bigdata.eu/md/def/core#Integer">Integer</a>
+      </li>
+      <li>
+         <a href="#core#Number" title="http://www.aegis-bigdata.eu/md/def/core#Number">Number</a>
+      </li>
+      <li>
+         <a href="#core#Object" title="http://www.aegis-bigdata.eu/md/def/core#Object">Object</a>
+      </li>
+      <li>
+         <a href="#core#String" title="http://www.aegis-bigdata.eu/md/def/core#String">String</a>
+      </li>
+      <li>
+         <a href="#core#Time" title="http://www.aegis-bigdata.eu/md/def/core#Time">Time</a>
+      </li>
+      <li>
+         <a href="#core#WebAdresses"
+            title="http://www.aegis-bigdata.eu/md/def/core#WebAdresses">WebAdresses</a>
+      </li>
+      <li>
+         <a href="#core#Year" title="http://www.aegis-bigdata.eu/md/def/core#Year">Year</a>
+      </li>
+      <li>
+         <a href="#core#Yearmonth"
+            title="http://www.aegis-bigdata.eu/md/def/core#Yearmonth">Yearmonth</a>
+      </li>
+   </ul>
+   <div class="entity" id="core#Any">
+      <h3>Any<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Any</p>
+      <div class="comment">
+         <span class="markdown">Any kind of data</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Array">
+      <h3>Array<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Array</p>
+      <div class="comment">
+         <span class="markdown">The field contains data that is a valid JSON format arrays.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Boolean">
+      <h3>Boolean<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Boolean</p>
+      <div class="comment">
+         <span class="markdown">The field contains boolean (true/false) data.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Date">
+      <h3>Date<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Date</p>
+      <div class="comment">
+         <span class="markdown">A date without a time: ISO8601</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Datetime">
+      <h3>Datetime<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Datetime</p>
+      <div class="comment">
+         <span class="markdown">A date with a time: ISO8601</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Duration">
+      <h3>Duration<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Duration</p>
+      <div class="comment">
+         <span class="markdown">A duration of time: ISO8601</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Geojson">
+      <h3>Geojson<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Geojson</p>
+      <div class="comment">
+         <span class="markdown">The field contains a JSON object according to GeoJSON or TopoJSON spec.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Geopoint">
+      <h3>Geopoint<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Geopoint</p>
+      <div class="comment">
+         <span class="markdown">The field contains data describing a geographic point: lon,lat</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Integer">
+      <h3>Integer<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Integer</p>
+      <div class="comment">
+         <span class="markdown">The field contains integers - that is whole numbers.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Number">
+      <h3>Number<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Number</p>
+      <div class="comment">
+         <span class="markdown">The field contains numbers of any kind including decimals.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Object">
+      <h3>Object<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Object</p>
+      <div class="comment">
+         <span class="markdown">The field contains data which is valid JSON.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#String">
+      <h3>String<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#String</p>
+      <div class="comment">
+         <span class="markdown">The field contains strings, that is, sequences of characters.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Time">
+      <h3>Time<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Time</p>
+      <div class="comment">
+         <span class="markdown">A time without a date: ISO8601</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#WebAdresses">
+      <h3>WebAdresses<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#WebAdresses</p>
+      <div class="comment">
+         <span class="markdown">A valid URL.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Year">
+      <h3>Year<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Year</p>
+      <div class="comment">
+         <span class="markdown">A calendar year: YYYY</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="core#Yearmonth">
+      <h3>Yearmonth<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.aegis-bigdata.eu/md/def/core#Yearmonth</p>
+      <div class="comment">
+         <span class="markdown">A specific month in a specific year: YYYY-MM</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#core#FieldType"
+               title="http://www.aegis-bigdata.eu/md/def/core#FieldType">FieldType</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

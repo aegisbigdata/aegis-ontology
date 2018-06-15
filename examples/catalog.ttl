@@ -1,0 +1,17 @@
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix hops:  <http://www.aegis-bigdata.eu/md/voc/hops/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix aegis: <http://www.aegis-bigdata.eu/md/voc/core/> .
+@prefix dcat:  <http://www.w3.org/ns/dcat#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://www.aegis-bigdata.eu/md/catalog/weather>
+        a                dcat:Catalog ;
+        dct:description  "Various weather data" ;
+        dct:publisher    [ foaf:homepage  "http://www.fokus.fraunhofer.de" ;
+                           foaf:name      "Fraunhofer FOKUS"
+                         ] ;
+        dct:title        "weather" ;
+        hops:projectId   "10252" ;
+        dcat:dataset     <http://www.aegis-bigdata.eu/md/dataset/austria> , <http://www.aegis-bigdata.eu/md/dataset/greece> , <http://www.aegis-bigdata.eu/md/dataset/italy> .

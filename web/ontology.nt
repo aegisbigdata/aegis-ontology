@@ -1,0 +1,257 @@
+<http://www.aegis-bigdata.eu/md/def/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.aegis-bigdata.eu/md/def/> <http://purl.org/dc/elements/1.1/abstract> "This is the AEGIS Big Data Vocabulary." .
+<http://www.aegis-bigdata.eu/md/def/> <http://purl.org/dc/elements/1.1/creator> "AEGIS Project" .
+<http://www.aegis-bigdata.eu/md/def/> <http://purl.org/dc/elements/1.1/creator> "Andreas Schramm" .
+<http://www.aegis-bigdata.eu/md/def/> <http://purl.org/dc/elements/1.1/creator> "Fabian Kirstein" .
+<http://www.aegis-bigdata.eu/md/def/> <http://purl.org/dc/elements/1.1/creator> "Yury Glikman" .
+<http://www.aegis-bigdata.eu/md/def/> <http://purl.org/dc/elements/1.1/publisher> "Fraunhofer FOKUS" .
+<http://www.aegis-bigdata.eu/md/def/> <http://purl.org/dc/elements/1.1/title> "AEGIS Big Data Vocabulary" .
+<http://www.aegis-bigdata.eu/md/def/> <http://purl.org/ontology/bibo/status> "Draft" .
+<http://www.aegis-bigdata.eu/md/def/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "aegis" .
+<http://www.aegis-bigdata.eu/md/def/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.aegis-bigdata.eu/md/voc/" .
+<http://www.aegis-bigdata.eu/md/def/> <http://www.w3.org/2002/07/owl#versionInfo> "0.5.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.aegis-bigdata.eu/md/def/core#hasField
+<http://www.aegis-bigdata.eu/md/def/core#hasField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.aegis-bigdata.eu/md/def/core#hasField> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> .
+<http://www.aegis-bigdata.eu/md/def/core#hasField> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.aegis-bigdata.eu/md/def/core#Field> .
+<http://www.aegis-bigdata.eu/md/def/core#hasField> <http://www.w3.org/2000/01/rdf-schema#comment> "A field of the tabular data." .
+<http://www.aegis-bigdata.eu/md/def/core#hasField> <http://www.w3.org/2000/01/rdf-schema#label> "hasField" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#type
+<http://www.aegis-bigdata.eu/md/def/core#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.aegis-bigdata.eu/md/def/core#type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Field> .
+<http://www.aegis-bigdata.eu/md/def/core#type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#FieldType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.aegis-bigdata.eu/md/def/core#type> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of data of the column." .
+<http://www.aegis-bigdata.eu/md/def/core#type> <http://www.w3.org/2000/01/rdf-schema#label> "type" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.aegis-bigdata.eu/md/def/core#description
+<http://www.aegis-bigdata.eu/md/def/core#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.aegis-bigdata.eu/md/def/core#description> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Field> .
+<http://www.aegis-bigdata.eu/md/def/core#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.aegis-bigdata.eu/md/def/core#description> <http://www.w3.org/2000/01/rdf-schema#comment> "An expressive description of the column." .
+<http://www.aegis-bigdata.eu/md/def/core#description> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey
+<http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> .
+<http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey> <http://www.w3.org/2000/01/rdf-schema#comment> "A primary key of the tabular data." .
+<http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey> <http://www.w3.org/2000/01/rdf-schema#label> "hasPrimaryKey" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#name
+<http://www.aegis-bigdata.eu/md/def/core#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.aegis-bigdata.eu/md/def/core#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Field> .
+<http://www.aegis-bigdata.eu/md/def/core#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.aegis-bigdata.eu/md/def/core#name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the column aka. the value in the first row." .
+<http://www.aegis-bigdata.eu/md/def/core#name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#number
+<http://www.aegis-bigdata.eu/md/def/core#number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.aegis-bigdata.eu/md/def/core#number> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Field> .
+<http://www.aegis-bigdata.eu/md/def/core#number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://www.aegis-bigdata.eu/md/def/core#number> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of the column." .
+<http://www.aegis-bigdata.eu/md/def/core#number> <http://www.w3.org/2000/01/rdf-schema#label> "number" .
+# 
+# http://www.aegis-bigdata.eu/md/def/hops#datasetId
+<http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Dataset> .
+<http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique ID of the corresponding data set in Hops" .
+<http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/2000/01/rdf-schema#label> "datasetId" .
+# 
+# http://www.aegis-bigdata.eu/md/def/hops#fileId
+<http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Distribution> .
+<http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique ID of the corresponding file in Hops" .
+<http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/2000/01/rdf-schema#label> "fileId" .
+# 
+# http://www.aegis-bigdata.eu/md/def/hops#projectId
+<http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Catalog> .
+<http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique ID of the corresponding project in Hops" .
+<http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/2000/01/rdf-schema#label> "projectId" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Catalog
+<http://www.aegis-bigdata.eu/md/def/core#Catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.aegis-bigdata.eu/md/def/core#Catalog> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Catalog> .
+<http://www.w3.org/ns/dcat#Catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.aegis-bigdata.eu/md/def/core#Catalog> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of a catalogue on the AEGIS platform. (Projects)" .
+<http://www.aegis-bigdata.eu/md/def/core#Catalog> <http://www.w3.org/2000/01/rdf-schema#label> "Catalog" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Dataset
+<http://www.aegis-bigdata.eu/md/def/core#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.aegis-bigdata.eu/md/def/core#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> .
+<http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.aegis-bigdata.eu/md/def/core#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of a dataset on the AEGIS platform. (Data Set)" .
+<http://www.aegis-bigdata.eu/md/def/core#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Distribution
+<http://www.aegis-bigdata.eu/md/def/core#Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.aegis-bigdata.eu/md/def/core#Distribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Distribution> .
+<http://www.w3.org/ns/dcat#Distribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.aegis-bigdata.eu/md/def/core#Distribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of a distribution on the AEGIS platform. (File)" .
+<http://www.aegis-bigdata.eu/md/def/core#Distribution> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Field
+<http://www.aegis-bigdata.eu/md/def/core#Field> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.aegis-bigdata.eu/md/def/core#Field> <http://www.w3.org/2000/01/rdf-schema#comment> "A definition of a column in a table" .
+<http://www.aegis-bigdata.eu/md/def/core#Field> <http://www.w3.org/2000/01/rdf-schema#label> "Field" .
+<http://www.aegis-bigdata.eu/md/def/core#Field> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#FieldType
+<http://www.aegis-bigdata.eu/md/def/core#FieldType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.aegis-bigdata.eu/md/def/core#FieldType> <http://www.w3.org/2000/01/rdf-schema#comment> "The precise type of data of a column" .
+<http://www.aegis-bigdata.eu/md/def/core#FieldType> <http://www.w3.org/2000/01/rdf-schema#label> "FieldType" .
+<http://www.aegis-bigdata.eu/md/def/core#FieldType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.aegis-bigdata.eu/md/def/core#Field> .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#TabularDistribution
+<http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.aegis-bigdata.eu/md/def/core#Distribution> .
+<http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Special type of a distribution on the AEGIS platform, which provides tabular data" .
+<http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> <http://www.w3.org/2000/01/rdf-schema#label> "TabularDistribution" .
+# 
+# http://www.w3.org/2000/01/rdf-schema#Class
+# 
+# http://www.w3.org/ns/dcat#Catalog
+# 
+# http://www.w3.org/ns/dcat#Dataset
+# 
+# http://www.w3.org/ns/dcat#Distribution
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Any
+<http://www.aegis-bigdata.eu/md/def/core#Any> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Any> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Any> <http://www.w3.org/2000/01/rdf-schema#comment> "Any kind of data" .
+<http://www.aegis-bigdata.eu/md/def/core#Any> <http://www.w3.org/2000/01/rdf-schema#label> "Any" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Array
+<http://www.aegis-bigdata.eu/md/def/core#Array> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Array> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Array> <http://www.w3.org/2000/01/rdf-schema#comment> "The field contains data that is a valid JSON format arrays." .
+<http://www.aegis-bigdata.eu/md/def/core#Array> <http://www.w3.org/2000/01/rdf-schema#label> "Array" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Boolean
+<http://www.aegis-bigdata.eu/md/def/core#Boolean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Boolean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Boolean> <http://www.w3.org/2000/01/rdf-schema#comment> "The field contains boolean (true/false) data." .
+<http://www.aegis-bigdata.eu/md/def/core#Boolean> <http://www.w3.org/2000/01/rdf-schema#label> "Boolean" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Date
+<http://www.aegis-bigdata.eu/md/def/core#Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Date> <http://www.w3.org/2000/01/rdf-schema#comment> "A date without a time: ISO8601" .
+<http://www.aegis-bigdata.eu/md/def/core#Date> <http://www.w3.org/2000/01/rdf-schema#label> "Date" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Datetime
+<http://www.aegis-bigdata.eu/md/def/core#Datetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Datetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Datetime> <http://www.w3.org/2000/01/rdf-schema#comment> "A date with a time: ISO8601" .
+<http://www.aegis-bigdata.eu/md/def/core#Datetime> <http://www.w3.org/2000/01/rdf-schema#label> "Datetime" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Duration
+<http://www.aegis-bigdata.eu/md/def/core#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Duration> <http://www.w3.org/2000/01/rdf-schema#comment> "A duration of time: ISO8601" .
+<http://www.aegis-bigdata.eu/md/def/core#Duration> <http://www.w3.org/2000/01/rdf-schema#label> "Duration" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Geojson
+<http://www.aegis-bigdata.eu/md/def/core#Geojson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Geojson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Geojson> <http://www.w3.org/2000/01/rdf-schema#comment> "The field contains a JSON object according to GeoJSON or TopoJSON spec." .
+<http://www.aegis-bigdata.eu/md/def/core#Geojson> <http://www.w3.org/2000/01/rdf-schema#label> "Geojson" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Geopoint
+<http://www.aegis-bigdata.eu/md/def/core#Geopoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Geopoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Geopoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The field contains data describing a geographic point: lon,lat" .
+<http://www.aegis-bigdata.eu/md/def/core#Geopoint> <http://www.w3.org/2000/01/rdf-schema#label> "Geopoint" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Integer
+<http://www.aegis-bigdata.eu/md/def/core#Integer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Integer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Integer> <http://www.w3.org/2000/01/rdf-schema#comment> "The field contains integers - that is whole numbers." .
+<http://www.aegis-bigdata.eu/md/def/core#Integer> <http://www.w3.org/2000/01/rdf-schema#label> "Integer" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Number
+<http://www.aegis-bigdata.eu/md/def/core#Number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Number> <http://www.w3.org/2000/01/rdf-schema#comment> "The field contains numbers of any kind including decimals." .
+<http://www.aegis-bigdata.eu/md/def/core#Number> <http://www.w3.org/2000/01/rdf-schema#label> "Number" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Object
+<http://www.aegis-bigdata.eu/md/def/core#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Object> <http://www.w3.org/2000/01/rdf-schema#comment> "The field contains data which is valid JSON." .
+<http://www.aegis-bigdata.eu/md/def/core#Object> <http://www.w3.org/2000/01/rdf-schema#label> "Object" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#String
+<http://www.aegis-bigdata.eu/md/def/core#String> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#String> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#String> <http://www.w3.org/2000/01/rdf-schema#comment> "The field contains strings, that is, sequences of characters." .
+<http://www.aegis-bigdata.eu/md/def/core#String> <http://www.w3.org/2000/01/rdf-schema#label> "String" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Time
+<http://www.aegis-bigdata.eu/md/def/core#Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Time> <http://www.w3.org/2000/01/rdf-schema#comment> "A time without a date: ISO8601" .
+<http://www.aegis-bigdata.eu/md/def/core#Time> <http://www.w3.org/2000/01/rdf-schema#label> "Time" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#WebAdresses
+<http://www.aegis-bigdata.eu/md/def/core#WebAdresses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#WebAdresses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#WebAdresses> <http://www.w3.org/2000/01/rdf-schema#comment> "A valid URL." .
+<http://www.aegis-bigdata.eu/md/def/core#WebAdresses> <http://www.w3.org/2000/01/rdf-schema#label> "WebAdresses" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Year
+<http://www.aegis-bigdata.eu/md/def/core#Year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Year> <http://www.w3.org/2000/01/rdf-schema#comment> "A calendar year: YYYY" .
+<http://www.aegis-bigdata.eu/md/def/core#Year> <http://www.w3.org/2000/01/rdf-schema#label> "Year" .
+# 
+# http://www.aegis-bigdata.eu/md/def/core#Yearmonth
+<http://www.aegis-bigdata.eu/md/def/core#Yearmonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.aegis-bigdata.eu/md/def/core#Yearmonth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.aegis-bigdata.eu/md/def/core#FieldType> .
+<http://www.aegis-bigdata.eu/md/def/core#Yearmonth> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific month in a specific year: YYYY-MM" .
+<http://www.aegis-bigdata.eu/md/def/core#Yearmonth> <http://www.w3.org/2000/01/rdf-schema#label> "Yearmonth" .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
