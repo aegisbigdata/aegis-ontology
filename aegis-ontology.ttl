@@ -14,7 +14,7 @@
 <http://www.aegis-bigdata.eu/md/def/>
 	rdf:type owl:Ontology ;
 	dc:title "AEGIS Big Data Vocabulary" ;
-	owl:versionInfo "0.5.0" ;
+	owl:versionInfo "0.6.0" ;
 	dc:creator "Fabian Kirstein" ;
 	dc:creator "Andreas Schramm" ;
 	dc:creator "Yury Glikman" ;
@@ -156,21 +156,21 @@ hops:projectId
     a owl:DatatypeProperty;
     rdfs:label "projectId";
 	rdfs:domain aegis:Catalog;
-    rdfs:range xsd:string .
+    rdfs:range xsd:integer .
 
 
 hops:datasetId
 	 a owl:DatatypeProperty;
     rdfs:label "datasetId";
 	rdfs:domain aegis:Dataset;
-    rdfs:range xsd:string;
+    rdfs:range xsd:integer;
     rdfs:comment "Unique ID of the corresponding data set in Hops" .
 
 hops:fileId
 	a owl:DatatypeProperty;
     rdfs:label "fileId";
 	rdfs:domain aegis:Distribution;
-    rdfs:range xsd:string;
+    rdfs:range xsd:integer;
     rdfs:comment "Unique ID of the corresponding file in Hops" .
 
 aegis:hasField 
@@ -207,6 +207,13 @@ aegis:description
 	rdfs:domain aegis:Field;
     rdfs:range xsd:string;
     rdfs:comment "An expressive description of the column." .
+
+aegis:hasHeader 
+	 a owl:DatatypeProperty;
+    rdfs:label "hasHeader";
+	rdfs:domain aegis:Field;
+    rdfs:range xsd:boolean;
+    rdfs:comment "Indicates if a table has a header." .
 
 aegis:type 
 	a owl:ObjectProperty;

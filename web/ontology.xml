@@ -85,6 +85,18 @@
     
 
 
+    <!-- http://www.aegis-bigdata.eu/md/def/core#hasHeader -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.aegis-bigdata.eu/md/def/core#hasHeader">
+        <rdfs:domain rdf:resource="http://www.aegis-bigdata.eu/md/def/core#Field"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indicates if a table has a header.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasHeader</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey -->
 
 
@@ -126,7 +138,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.aegis-bigdata.eu/md/def/hops#datasetId">
         <rdfs:domain rdf:resource="http://www.aegis-bigdata.eu/md/def/core#Dataset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unique ID of the corresponding data set in Hops</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">datasetId</rdfs:label>
     </owl:DatatypeProperty>
@@ -138,7 +150,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.aegis-bigdata.eu/md/def/hops#fileId">
         <rdfs:domain rdf:resource="http://www.aegis-bigdata.eu/md/def/core#Distribution"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unique ID of the corresponding file in Hops</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fileId</rdfs:label>
     </owl:DatatypeProperty>
@@ -150,7 +162,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.aegis-bigdata.eu/md/def/hops#projectId">
         <rdfs:domain rdf:resource="http://www.aegis-bigdata.eu/md/def/core#Catalog"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unique ID of the corresponding project in Hops</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">projectId</rdfs:label>
     </owl:DatatypeProperty>

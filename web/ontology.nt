@@ -50,6 +50,13 @@
 <http://www.aegis-bigdata.eu/md/def/core#description> <http://www.w3.org/2000/01/rdf-schema#comment> "An expressive description of the column." .
 <http://www.aegis-bigdata.eu/md/def/core#description> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
 # 
+# http://www.aegis-bigdata.eu/md/def/core#hasHeader
+<http://www.aegis-bigdata.eu/md/def/core#hasHeader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.aegis-bigdata.eu/md/def/core#hasHeader> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Field> .
+<http://www.aegis-bigdata.eu/md/def/core#hasHeader> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.aegis-bigdata.eu/md/def/core#hasHeader> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if a table has a header." .
+<http://www.aegis-bigdata.eu/md/def/core#hasHeader> <http://www.w3.org/2000/01/rdf-schema#label> "hasHeader" .
+# 
 # http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey
 <http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.aegis-bigdata.eu/md/def/core#hasPrimaryKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#TabularDistribution> .
@@ -74,21 +81,21 @@
 # http://www.aegis-bigdata.eu/md/def/hops#datasetId
 <http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Dataset> .
-<http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique ID of the corresponding data set in Hops" .
 <http://www.aegis-bigdata.eu/md/def/hops#datasetId> <http://www.w3.org/2000/01/rdf-schema#label> "datasetId" .
 # 
 # http://www.aegis-bigdata.eu/md/def/hops#fileId
 <http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Distribution> .
-<http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique ID of the corresponding file in Hops" .
 <http://www.aegis-bigdata.eu/md/def/hops#fileId> <http://www.w3.org/2000/01/rdf-schema#label> "fileId" .
 # 
 # http://www.aegis-bigdata.eu/md/def/hops#projectId
 <http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aegis-bigdata.eu/md/def/core#Catalog> .
-<http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 <http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/2000/01/rdf-schema#comment> "Unique ID of the corresponding project in Hops" .
 <http://www.aegis-bigdata.eu/md/def/hops#projectId> <http://www.w3.org/2000/01/rdf-schema#label> "projectId" .
 # 
