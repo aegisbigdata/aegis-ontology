@@ -1,91 +1,57 @@
 @prefix dct:   <http://purl.org/dc/terms/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix hops:  <http://www.aegis-bigdata.eu/md/voc/hops/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix aegis: <http://www.aegis-bigdata.eu/md/voc/core/> .
+@prefix hops:  <http://www.aegis-bigdata.eu/md/voc/hops/> .
 @prefix dcat:  <http://www.w3.org/ns/dcat#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
-<http://www.aegis-bigdata.eu/md/dataset/austria>
+<http://www.aegis-bigdata.eu/set/data/example-dataset>
         a                  dcat:Dataset ;
-        dct:description    "Weather data for austria" ;
+        dct:description    "This is an example Dataset" ;
         dct:publisher      [ foaf:homepage  "http://www.fokus.fraunhofer.de" ;
                              foaf:name      "Fraunhofer FOKUS"
                            ] ;
-        dct:title          "austria" ;
-        hops:datasetId     "3754629" ;
-        dcat:contactPoint  [ vcard:hasEmail  "fabian.kirstein@fokus.fraunhofer.de" ;
-                             vcard:hasName   "Fabian Kirstein"
-                           ] ;
-        dcat:distribution  <http://www.aegis-bigdata.eu/md/dataset/austria/distribution/Weather-Data-for-Graz-19-05-2018> , <http://www.aegis-bigdata.eu/md/dataset/austria/distribution/Weather-Data-for-Leibnitz-19-05-2018> , <http://www.aegis-bigdata.eu/md/dataset/austria/distribution/Weather-Data-for-Micheldorf-19-05-2018> ;
-        dcat:keyword       "weather" , "austria" , "temperature" , "humidity" ;
+        dct:title          "Example Dataset" ;
+        dcat:distribution  <http://www.aegis-bigdata.eu/set/distribution/1234> ;
+        dcat:keyword       "example" , "test" , "aegis" ;
         dcat:theme         <http://publications.europa.eu/resource/authority/data-theme/ENVI> .
 
-<http://www.aegis-bigdata.eu/md/dataset/austria/distribution/Weather-Data-for-Graz-19-05-2018>
-        dct:description      "Weater Data for Graz" ;
+
+<http://www.aegis-bigdata.eu/set/record/example-dataset>
+        a                  dcat:CatalogRecord ;
+        hops:datasetId     "3754629" ;
+        dct:created        "2019-04-21T11:17:23Z"^^xsd:dateTime ;
+        dct:modified       "2019-04-21T11:17:23Z"^^xsd:dateTime .
+
+
+<http://www.aegis-bigdata.eu/set/distribution/1234>
+        a                     dcat:Distribution, aegis:TabularDistribution ;
+        dct:title            "Example Distribution" ;
+        dct:description      "This is an example distribution" ;
         dct:format           "CSV" ;
-        dct:license          "CC-BY" ;
-        dct:title            "Weather Data for Graz 19-05-2018" ;
-        aegis:hasField       [ aegis:description  "The Humidity of the entry" ;
-                               aegis:name         "Humidity" ;
-                               aegis:number       "6" ;
-                               aegis:type         "number"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The Wind Direction of the entry" ;
-                               aegis:name         "Wind Direction" ;
-                               aegis:number       "11" ;
-                               aegis:type         "number"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The Avg. Temperature of the entry" ;
-                               aegis:name         "Avg. Temperature" ;
-                               aegis:number       "4" ;
-                               aegis:type         "number"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The Min. Temperature of the entry" ;
-                               aegis:name         "Min. Temperature" ;
-                               aegis:number       "7" ;
-                               aegis:type         "number"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The location of the entry (human-readable)" ;
-                               aegis:name         "Location" ;
-                               aegis:number       "1" ;
-                               aegis:type         "string"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The Cloudiness of the entry" ;
-                               aegis:name         "Cloudiness" ;
-                               aegis:number       "12" ;
-                               aegis:type         "number"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The Geopoint of the entry" ;
-                               aegis:name         "Geopoint" ;
-                               aegis:number       "3" ;
-                               aegis:type         "geopoint"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The Max. Temperature of the entry" ;
-                               aegis:name         "Max. Temperature" ;
-                               aegis:number       "8" ;
-                               aegis:type         "number"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The Wind Speed of the entry" ;
-                               aegis:name         "Wind Speed" ;
-                               aegis:number       "10" ;
-                               aegis:type         "number"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The Pressure of the entry" ;
-                               aegis:name         "Pressure" ;
-                               aegis:number       "5" ;
-                               aegis:type         "number"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The time of the entry" ;
-                               aegis:name         "Time" ;
-                               aegis:number       "2" ;
-                               aegis:type         "datetime"
-                             ] ;
-        aegis:hasField       [ aegis:description  "The Visibility of the entry" ;
-                               aegis:name         "Visibility" ;
-                               aegis:number       "9" ;
-                               aegis:type         "number"
-                             ] ;
-        aegis:hasPrimaryKey  "Time" ;
         hops:fileId          "3804679" ;
-        dcat:accessURL       <hdfs:///Projects/weather/austria/2018-05-18T18-36-00_Graz.csv> .
+        dcat:accessURL       <hdfs:///Projects/AutomotiveDemonstrator/Demo2_SafeDrivingIndicator/Events/Driver1_Vehicle6_20170224_Trip_011__withoutnan.csv> ;
+        aegis:hasField       [ aegis:description  "The latitude of the entry" ;
+                               aegis:name         "latitude" ;
+                               aegis:number       "1" ;
+                               aegis:type         aegis:Latitude
+                             ] ;
+        aegis:hasField       [ aegis:description  "The longitude of the entry" ;
+                               aegis:name         "longitude" ;
+                               aegis:number       "2" ;
+                               aegis:type         aegis:Longitude
+                             ] ;
+        aegis:hasField       [ aegis:description  "A description of the entry" ;
+                               aegis:name         "text" ;
+                               aegis:number       "3" ;
+                               aegis:type         aegis:String 
+                             ] ;
+        aegis:hasField       [ aegis:description  "The color of the marker" ;
+                               aegis:name         "color" ;
+                               aegis:number       "4" ;
+                               aegis:type         aegis:Color
+                             ] .
+

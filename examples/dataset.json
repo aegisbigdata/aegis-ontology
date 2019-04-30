@@ -1,0 +1,118 @@
+{
+    "@context": {
+      "aegis": "http://www.aegis-bigdata.eu/md/voc/core/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dct": "http://purl.org/dc/terms/",
+      "dcterms": "http://purl.org/dc/terms/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "hops": "http://www.aegis-bigdata.eu/md/voc/hops/",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "vcard": "http://www.w3.org/2006/vcard/ns#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+      {
+        "@id": "http://www.aegis-bigdata.eu/set/data/example-dataset",
+        "@type": "dcat:Dataset",
+        "dcat:distribution": {
+          "@id": "http://www.aegis-bigdata.eu/set/distribution/1234"
+        },
+        "dcat:keyword": [
+          "test",
+          "example",
+          "aegis"
+        ],
+        "dcat:theme": {
+          "@id": "http://publications.europa.eu/resource/authority/data-theme/ENVI"
+        },
+        "dcterms:description": "This is an example Dataset",
+        "dcterms:publisher": {
+          "@id": "_:ub1300bL13C28"
+        },
+        "dcterms:title": "Example Dataset"
+      },
+      {
+        "@id": "http://www.aegis-bigdata.eu/set/record/example-dataset",
+        "@type": "dcat:CatalogRecord",
+        "dcterms:created": {
+          "@type": "xsd:dateTime",
+          "@value": "2019-04-21T11:17:23+00:00"
+        },
+        "dcterms:modified": {
+          "@type": "xsd:dateTime",
+          "@value": "2019-04-21T11:17:23+00:00"
+        },
+        "hops:datasetId": "3754629"
+      },
+      {
+        "@id": "http://www.aegis-bigdata.eu/set/distribution/1234",
+        "@type": [
+          "aegis:TabularDistribution",
+          "dcat:Distribution"
+        ],
+        "aegis:hasField": [
+          {
+            "@id": "_:ub1300bL41C30"
+          },
+          {
+            "@id": "_:ub1300bL51C30"
+          },
+          {
+            "@id": "_:ub1300bL36C30"
+          },
+          {
+            "@id": "_:ub1300bL46C30"
+          }
+        ],
+        "dcat:accessURL": {
+          "@id": "hdfs:///Projects/AutomotiveDemonstrator/Demo2_SafeDrivingIndicator/Events/Driver1_Vehicle6_20170224_Trip_011__withoutnan.csv"
+        },
+        "dcterms:description": "This is an example distribution",
+        "dcterms:format": "CSV",
+        "dcterms:title": "Example Distribution",
+        "hops:fileId": "3804679"
+      },
+      {
+        "@id": "_:ub1300bL13C28",
+        "foaf:homepage": "http://www.fokus.fraunhofer.de",
+        "foaf:name": "Fraunhofer FOKUS"
+      },
+      {
+        "@id": "_:ub1300bL41C30",
+        "aegis:description": "The longitude of the entry",
+        "aegis:name": "longitude",
+        "aegis:number": "2",
+        "aegis:type": {
+          "@id": "aegis:Longitude"
+        }
+      },
+      {
+        "@id": "_:ub1300bL36C30",
+        "aegis:description": "The latitude of the entry",
+        "aegis:name": "latitude",
+        "aegis:number": "1",
+        "aegis:type": {
+          "@id": "aegis:Latitude"
+        }
+      },
+      {
+        "@id": "_:ub1300bL51C30",
+        "aegis:description": "The color of the marker",
+        "aegis:name": "color",
+        "aegis:number": "4",
+        "aegis:type": {
+          "@id": "aegis:Color"
+        }
+      },
+      {
+        "@id": "_:ub1300bL46C30",
+        "aegis:description": "A description of the entry",
+        "aegis:name": "text",
+        "aegis:number": "3",
+        "aegis:type": {
+          "@id": "aegis:String"
+        }
+      }
+    ]
+  }
